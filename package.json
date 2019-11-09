@@ -1,0 +1,24 @@
+{
+  "name": "elasticsearch",
+  "version": "1.0.0",
+  "description": "ElasticSearch POC on nodejs",
+  "main": "index.js",
+  "repository": "https://github.com/navneetlal/elasticsearch-nodejs.git",
+  "author": "Navneet Lal Gupta",
+  "license": "MIT",
+  "scripts": {
+    "watch": "tsc -w",
+    "watch-node": "nodemon dist/server.js",
+    "build": "tsc",
+    "serve": "node build/index.js"
+  },
+  "dependencies": {
+    "@types/elasticsearch": "^5.0.36",
+    "elasticsearch": "^16.5.0",
+    "get-json": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4",
+    "typescript": "^3.7.2"
+  }
+}
