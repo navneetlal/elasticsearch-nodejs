@@ -12,4 +12,4 @@ until $(curl -sSf -XGET --insecure --user elastic:changeme 'http://localhost:920
 done
 
 # create a new index with the settings in es_index_config.json
-curl -v --insecure --user elastic:changeme -XPUT '0.0.0.0:9200/test?pretty' -H 'Content-Type: application/json' -d @es_index_config.json
+curl -v --insecure --user elastic:changeme -XPUT "0.0.0.0:9200/$INITIALIZE_WITH_INDEX?pretty" -H 'Content-Type: application/json' -d @es_index_config.json

@@ -1,5 +1,8 @@
 FROM docker.elastic.co/elasticsearch/elasticsearch:6.3.2
-RUN bin/elasticsearch-plugin install analysis-icu
+ARG INITIALIZE_WITH_INDEX=test
+ENV INITIALIZE_WITH_INDEX=${INITIALIZE_WITH_INDEX}
+
+# RUN bin/elasticsearch-plugin install analysis-icu
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 COPY config/elasticsearch.yml config/elasticsearch.yml
